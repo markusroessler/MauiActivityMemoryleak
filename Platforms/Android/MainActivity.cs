@@ -10,7 +10,14 @@ public class MainActivity : MauiAppCompatActivity
 {
     protected override void OnCreate(Bundle? savedInstanceState)
     {
+        // var oldActivity = ActivityStateManager.Default.GetCurrentActivity();
+
         base.OnCreate(savedInstanceState);
+
+        // if (oldActivity != null && !object.ReferenceEquals(this, oldActivity))
+        // {
+        //     oldActivity.Dispose();
+        // }
 
         var window = this.GetWindow();
         var serviceProvider = window.Handler.MauiContext.Services;
